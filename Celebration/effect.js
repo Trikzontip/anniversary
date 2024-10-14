@@ -202,6 +202,13 @@ $('document').ready(function(){
             } else {
                 $("p:nth-child(49)").promise().done(function () {
                     $('#craft').fadeIn('slow');
+					const element = document.getElementById('msg_cont');
+            		element.style.display = 'none';
+					const audio = document.getElementById('sn');
+        			audio.pause();
+					const video = document.getElementById('myVideo');
+        			video.onplay = videoStarted;
+					video.muted = false; // Unmute the video
                 });
             }
         });
